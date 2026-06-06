@@ -27,7 +27,7 @@ Este proyecto implementa una app sencilla de tareas con persistencia local en SQ
 ## Ejecución del proyecto
 
 1. Clona el repositorio:
-   - `git clone <URL_DEL_REPOSITORIO>`
+   - `git clone https://github.com/enedamian/MiAppBD2.git`
 2. Abre la solución en Visual Studio.
 3. Selecciona el destino (Android Emulator/Device, Windows, etc.).
 4. Ejecuta con **F5**.
