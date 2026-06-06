@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiAppBD2.TareaPage"
+             Title="Detalle de Tarea">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Título de la tarea" FontAttributes="Bold" />
+        <Entry x:Name="txtTitulo" Placeholder="Ej. Comprar pan" />
+
+        <Label Text="Fecha Límite (Opcional)" FontAttributes="Bold" />
+
+        <!-- Casilla para habilitar o deshabilitar la fecha (Manejo de NULLs) -->
+        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+            <CheckBox x:Name="chkTieneFecha" CheckedChanged="OnTieneFechaChanged" />
+            <Label Text="Establecer fecha límite" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <!-- El Almanaque (Oculto por defecto hasta que marquen la casilla) -->
+        <DatePicker x:Name="dpFecha" Format="yyyy-MM-dd" IsVisible="False" />
+
+        <Label Text="Categoría" FontAttributes="Bold" />
+
+        <!-- ItemDisplayBinding le dice al Picker qué columna de la tabla mostrar -->
+        <Picker x:Name="pckCategoria" Title="Selecciona una categoría..." ItemDisplayBinding="{Binding Nombre}" />
+
+        <Button Text="Guardar Tarea" Clicked="OnGuardarClicked" BackgroundColor="Green" TextColor="White" Margin="0,20,0,0"/>
+
+    </VerticalStackLayout>
+</ContentPage>
